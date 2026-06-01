@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-primary: 'Optima', 'EB Garamond', 'Palatino Linotype', Georgia, serif;
+    --font-secondary: 'Gill Sans', 'Trebuchet MS', Arial, sans-serif;
+    --color-navy: #1C3251;
+    --color-soft-blue: #7083BE;
+    --color-cyan: #A0E8F9;
+    --color-plum: #301727;
+    --color-beige: #DBD1C7;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-primary);
+    color: var(--color-navy);
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.18;
+  }
+
+  p, li, span, a, button, input, textarea, label, select {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+  }
+}
+
+@layer components {
+  /* ── Typography ── */
+  .section-eyebrow {
+    @apply text-soft-blue uppercase tracking-[0.35em] text-[11px] font-semibold mb-3 block;
+    font-family: var(--font-secondary);
+  }
+
+  .section-title {
+    @apply text-[2.1rem] md:text-[2.75rem] font-semibold text-navy leading-[1.15];
+    font-family: var(--font-primary);
+    letter-spacing: -0.02em;
+  }
+
+  .section-lead {
+    @apply text-navy/60 text-base md:text-[1.05rem] leading-[1.75] max-w-xl;
+    font-family: var(--font-secondary);
+  }
+
+  /* ── Divider ── */
+  .divider-line {
+    @apply block w-12 h-[2px] bg-cyan my-5;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply relative inline-flex items-center gap-2 bg-navy text-white px-8 py-3.5 text-[11px] font-bold tracking-[0.2em] uppercase overflow-hidden transition-all duration-300;
+    font-family: var(--font-secondary);
+  }
+  .btn-primary::after {
+    content: '';
+    @apply absolute inset-0 bg-soft-blue translate-x-full transition-transform duration-300;
+  }
+  .btn-primary:hover::after { @apply translate-x-0; }
+  .btn-primary > * { @apply relative z-10; }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-white/60 text-white px-8 py-3.5 text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-white hover:text-navy hover:border-white;
+    font-family: var(--font-secondary);
+  }
+
+  .btn-accent {
+    @apply relative inline-flex items-center gap-2 bg-soft-blue text-white px-8 py-3.5 text-[11px] font-bold tracking-[0.2em] uppercase overflow-hidden transition-all duration-300;
+    font-family: var(--font-secondary);
+  }
+  .btn-accent::after {
+    content: '';
+    @apply absolute inset-0 bg-navy translate-x-full transition-transform duration-300;
+  }
+  .btn-accent:hover::after { @apply translate-x-0; }
+  .btn-accent > * { @apply relative z-10; }
+
+  /* ── Nav ── */
+  .nav-link {
+    @apply text-white/75 hover:text-white transition-colors duration-200 text-[11px] font-semibold tracking-[0.18em] uppercase;
+    font-family: var(--font-secondary);
+  }
+
+  /* ── Cards ── */
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-1;
+  }
+}
+
+/* ── Hero background ── */
+.hero-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .hero-bg { background-attachment: scroll; }
+}
+
+/* ── Premium noise texture overlay ── */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f0ede9; }
+::-webkit-scrollbar-thumb { background: #7083BE; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1C3251; }
+
+/* ── Selection ── */
+::selection {
+  background: #A0E8F9;
+  color: #1C3251;
+}
