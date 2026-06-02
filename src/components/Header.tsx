@@ -60,7 +60,7 @@ export default function Header() {
         }`}
       />
 
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <button
           onClick={() => handleNav('#home')}
@@ -156,7 +156,7 @@ export default function Header() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-navy/98 backdrop-blur-sm border-t border-white/10">
-          <nav className="max-w-7xl mx-auto px-6 py-5 flex flex-col">
+          <nav className="max-w-6xl mx-auto px-6 py-5 flex flex-col">
             {navItems.map((item) => (
               <div key={item.label}>
                 <button

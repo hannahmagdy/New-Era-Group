@@ -15,8 +15,8 @@ export default function ImpactSection() {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-soft-blue/8 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Text — fades from left */}
           <Reveal direction="left" duration={800}>

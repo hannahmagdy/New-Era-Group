@@ -36,7 +36,7 @@ export default function Footer() {
       {/* Banner bar */}
       <div className="relative border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-plum/40 via-navy to-navy" />
-        <Reveal direction="fade" duration={800} className="relative z-10 max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <Reveal direction="fade" duration={800} className="relative z-10 max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p
               className="text-[1.5rem] md:text-[1.8rem] font-semibold text-white leading-snug"
@@ -62,7 +62,7 @@ export default function Footer() {
       </div>
 
       {/* Main grid */}
-      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Brand */}
         <Reveal direction="up" delay={0} duration={700}>
           <div className="mb-7">
@@ -198,7 +198,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/8">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p
             className="text-white/30 text-[11px] tracking-wider"
             style={{ fontFamily: 'var(--font-secondary)' }}

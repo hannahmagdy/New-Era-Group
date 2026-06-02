@@ -65,11 +65,11 @@ const pillars = [
 
 export default function EcosystemSection() {
   return (
-    <section id="ecosystem" className="py-32 bg-[#F7F5F2]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="ecosystem" className="py-24 bg-[#F7F5F2]">
+      <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
-        <Reveal direction="up" duration={750} className="max-w-2xl mb-20">
+        <Reveal direction="up" duration={750} className="max-w-2xl mb-14">
           <span className="section-eyebrow">What We Build</span>
           <span className="divider-line" />
           <h2 className="section-title mb-5">Our Ecosystem</h2>

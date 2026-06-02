@@ -15,9 +15,9 @@ const values = ['Excellence', 'Long-Term Impact', 'Innovation', 'Future-Focused 
 
 export default function PartnershipsSection() {
   return (
-    <section id="partnerships" className="py-32 bg-[#F7F5F2]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20 items-start">
+    <section id="partnerships" className="py-24 bg-[#F7F5F2]">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
 
           {/* Left text — fades from left */}
           <Reveal direction="left" duration={800}>

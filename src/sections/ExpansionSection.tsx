@@ -19,9 +19,9 @@ export default function ExpansionSection() {
   };
 
   return (
-    <section id="expansion" className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+    <section id="expansion" className="py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Image — fades from left */}
           <Reveal direction="left" duration={800}>
